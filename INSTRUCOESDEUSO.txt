@@ -1,0 +1,19 @@
+﻿Esse projeto possui 3 arquivos .py principais:
+-> projetoFinal.py é o arquivo de treino que seleciona gerações de redes neurais para encontrar um melhor agente treinado com estrategia evolutiva. Todos os agentes (representados por controles) são guardados na pasta controle em formato .pkl e uma segunda cópia é feita somente para o agente de melhor desempenho gerado pela execução do código sendo guardado em controles/controleFinal.pkl.
+-> o arquivo funcoesProjeto.py guarda funcoes e classes do projeto (inclusive a class controller que usamos)
+->o arquivo test.py roda o agente guardado em agenteFinal.pkl (o agente final foi gerado pela execução do código projetoFinal.py e guardado no arquivo controleFinal.pkl, porem separamos uma copia do agente e a renomeamos como agenteFinal.pkl para que os agentes na pasta controle possam ser sobrescritos livremente sem a perda do agente final de melhor perfomace que geramos em nosso projeto)
+
+Funcionalidade:
+->Execute test.py para ver o melhor agente gerado em nosso projeto lutando contra todos os chefões.
+->Ao rodar projetoFinal.py será perguntado "Controles iniciais devem ser restaurados?" se resposta for sim o treino terá a primeira geração de controles sendo aqueles guardados na pasta cotroles (os agentes gerados na última vez que projetoFinal.py rodou) e o chefão inicial será aquele que esses agentes enfrentaram por último (guardado em controles/ultRobo.txt), caso responda não a primeira geração será gerada de forma aleátoria.
+DETALHES: Enquanto  projetoFinal.py executar sera mostrado na tela a cada interação os ids (numeros aleatorios de identificação) dos agentes da geração atual e qual esta sendo testado em cada momento. Alem disso quando os agentes são selecionados é printado quais são selecionados por melhor desempenho e quais foram escolhidos para se reproduzir entre si. Por ultimo na fase de mutação é informado através de prints na tela se ocorreu mutações também e com que agente. TODOS os agente sempre são identificados por seus ids na hora de serem printados na tela.
+ATENÇÃO: Quando projetoFinal.py termina de executar todos os controles guardados em arquivos .pkl dentro da pasta controles serão sobrescritos pela última geração de controles (agentes) que foram gerados durante a execução. Também será sobrescrito o ultRobo.txt guardando o número do último chefão enfrentado.
+
+
+Bibliotecas necessarias para projeto funcionar:
+-> sys,os
+-> datetime,time
+-> numpy
+-> pickle
+-> keras
+-> pygame
